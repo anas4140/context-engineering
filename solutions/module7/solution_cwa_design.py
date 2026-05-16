@@ -5,9 +5,18 @@ Answer key for the Module 7 Lesson 4 hands-on task:
 Design all 11 CWA layers for a customer support chatbot, then
 run a live demo with the assembled context.
 
+Upgrade: stable system-prompt layers (1, 2, 3, 5, 10) are sent with
+cache_control so repeated demo runs reuse the cached prefix.
+
 Run:
     python solutions/module7/solution_cwa_design.py
 """
+
+import sys
+import os
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
+from config import MODEL_FAST
 
 from anthropic import Anthropic
 from dotenv import load_dotenv
@@ -185,9 +194,17 @@ def assemble_and_run(user_query: str) -> str:
     user_parts.append(f"[Layer 11 — User Query]\n{user_query}")
     user_message = "\n\n".join(user_parts)
 
+    # Wrap system prompt in a cached content block so repeated runs reuse it
+    system_blocks = [
+        {
+            "type": "text",
+            "text": system_prompt,
+            "cache_control": {"type": "ephemeral"},
+        },
+    ]
     response = client.messages.create(
-        model="claude-haiku-4-5-20251001", max_tokens=512,
-        system=system_prompt,
+        model=MODEL_FAST, max_tokens=512,
+        system=system_blocks,
         messages=[{"role": "user", "content": user_message}]
     )
     return response.content[0].text
