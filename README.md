@@ -58,11 +58,14 @@ python code/module1/lesson1_context_demo.py
 |---|---|---|---|
 | [Module 1](Lessons/Module1/) | Foundations of Context Engineering | 3 | [code/module1/](code/module1/) |
 | [Module 2](Lessons/Module2/) | Advanced Prompting Techniques | 3 | [code/module2/](code/module2/) |
-| [Module 3](Lessons/Module3/) | Retrieval-Augmented Generation (RAG) | 4 | [code/module3/](code/module3/) |
+| [Module 3](Lessons/Module3/) | Retrieval-Augmented Generation (RAG) + Hybrid Search | 5 | [code/module3/](code/module3/) |
 | [Module 4](Lessons/Module4/) | Optimising the Context Window | 3 | [code/module4/](code/module4/) |
-| [Module 5](Lessons/Module5/) | From RAG to Agents | 3 | [code/module5/](code/module5/) |
+| [Module 5](Lessons/Module5/) | From RAG to Agents + Structured Outputs | 4 | [code/module5/](code/module5/) |
 | [Module 6](Lessons/Module6/) | Evaluation, Testing & Security | 3 | [code/module6/](code/module6/) |
-| [Module 7](Lessons/Module7/) | The Future of Context (CWA) | 4 | [code/module7/](code/module7/) |
+| [Module 7](Lessons/Module7/) | The Future of Context (CWA) + Files API | 5 | [code/module7/](code/module7/) |
+| [Module 8](Lessons/Module8/) | Extended Thinking | 2 | [code/module8/](code/module8/) |
+| [Module 9](Lessons/Module9/) | Production at Scale (Batch API, Streaming, Rate Limits) | 3 | [code/module9/](code/module9/) |
+| [Module 10](Lessons/Module10/) | Model Context Protocol (MCP) | 2 | [code/module10/](code/module10/) |
 
 **Final Project:** [FINAL_PROJECT.md](FINAL_PROJECT.md) — Build a complete AI Research Assistant  
 **Glossary:** [GLOSSARY.md](GLOSSARY.md)  
@@ -74,9 +77,9 @@ python code/module1/lesson1_context_demo.py
 
 | Level | Time |
 |---|---|
-| Skim (read lessons only) | ~4 hours |
-| Standard (lessons + run code) | ~12 hours |
-| Deep (lessons + code + tasks) | ~25 hours |
+| Skim (read lessons only) | ~6 hours |
+| Standard (lessons + run code) | ~18 hours |
+| Deep (lessons + code + tasks) | ~35 hours |
 
 ---
 
@@ -85,17 +88,15 @@ python code/module1/lesson1_context_demo.py
 ```
 context-engineering/
 ├── Lessons/              # Markdown lesson files (theory + explanations)
-│   ├── Module1/
-│   │   ├── Lesson1_What_is_Context.md
-│   │   └── ...
-│   └── ...
+│   ├── Module1/ … Module10/
 ├── code/                 # Runnable Python examples (one file per lesson)
-│   ├── module1/
-│   │   ├── lesson1_context_demo.py
-│   │   └── ...
-│   └── ...
+│   ├── module1/ … module10/
 ├── solutions/            # Answer keys for every hands-on task
+│   ├── module1/ … module10/
+├── final_project/        # Capstone — full AI Research Assistant
+│   └── research_assistant.py
 ├── notebooks/            # Jupyter notebooks (optional, mirrors code/)
+├── config.py             # Shared model names and constants
 ├── requirements.txt
 ├── .env.example
 ├── FINAL_PROJECT.md
