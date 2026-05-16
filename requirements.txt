@@ -21,6 +21,15 @@ tenacity>=8.3.0          # retry logic for API calls
 # Evaluation (Module 6)
 ragas>=0.1.0,<0.2.0
 
+# Hybrid search — sparse BM25 retrieval (Module 3)
+rank-bm25>=0.2.2
+
+# MCP — Model Context Protocol client/server (Module 10)
+mcp>=1.0.0
+
+# Real web search (optional) — set TAVILY_API_KEY in .env to enable
+# tavily-python>=0.3.0
+
 # Notebooks (optional)
 jupyter>=1.0.0
 ipykernel>=6.29.0
