@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────
+#  Context Engineering for AI — Dependencies
+#  Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────
+
+# LLM provider
+anthropic>=0.28.0
+
+# Embeddings (converts text → vectors)
+sentence-transformers>=2.7.0
+
+# Vector store (local, no server needed)
+chromadb>=0.5.0
+
+# Utilities
+python-dotenv>=1.0.0     # loads .env API keys
+tiktoken>=0.7.0          # token counting
+rich>=13.7.0             # pretty terminal output
+tenacity>=8.3.0          # retry logic for API calls
+
+# Evaluation (Module 6)
+ragas>=0.1.0
+
+# Notebooks (optional)
+jupyter>=1.0.0
+ipykernel>=6.29.0

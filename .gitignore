@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────
+#  .gitignore for context-engineering repo
+# ─────────────────────────────────────────────
+
+# API keys — NEVER commit this
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# ChromaDB — local vector store data (large, user-generated)
+chroma_db/
+chroma_advanced/
+final_project_db/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_tmp
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Sentence transformer model cache
+# (auto-downloaded on first run — don't commit the ~90 MB model files)
+sentence_transformers/
