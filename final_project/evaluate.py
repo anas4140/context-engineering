@@ -25,10 +25,11 @@ from rich.rule import Rule
 import chromadb
 from chromadb.utils import embedding_functions
 
+from config import MODEL_FAST, MODEL_QUALITY
+
 load_dotenv()
 client  = Anthropic()
 console = Console()
-MODEL   = "claude-haiku-4-5-20251001"
 
 # ── Import the assistant's components ────────
 from final_project.research_assistant import (
@@ -99,7 +100,7 @@ def score(metric: str, answer: str, reference: str) -> float:
         ),
     }
     r = client.messages.create(
-        model=MODEL, max_tokens=10,
+        model=MODEL_FAST, max_tokens=10,
         messages=[{"role": "user", "content": prompts[metric]}]
     )
     try:
@@ -118,7 +119,7 @@ def run_assistant_query(query: str, collection) -> tuple[str, list[dict]]:
     while turns < 8:
         turns += 1
         response = client.messages.create(
-            model="claude-sonnet-4-6", max_tokens=512,
+            model=MODEL_QUALITY, max_tokens=512,
             system=system, tools=TOOLS, messages=messages,
         )
         if response.stop_reason == "end_turn":

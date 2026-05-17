@@ -44,7 +44,7 @@ def estimate_cost(input_tokens: int, output_tokens: int,
     pricing = {
         "claude-haiku-4-5-20251001":  {"input": 0.80,  "output": 4.00},
         "claude-sonnet-4-6": {"input": 3.00,  "output": 15.00},
-        "claude-opus-4-6":   {"input": 15.00, "output": 75.00},
+        "claude-opus-4-7":   {"input": 15.00, "output": 75.00},
     }
     rates = pricing.get(model, pricing["claude-haiku-4-5-20251001"])
     input_cost  = (input_tokens  / 1_000_000) * rates["input"]
