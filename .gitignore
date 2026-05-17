@@ -42,3 +42,10 @@ final_project_db/
 # Sentence transformer model cache
 # (auto-downloaded on first run — don't commit the ~90 MB model files)
 sentence_transformers/
+
+# Docusaurus website — generated artifacts (never commit these)
+website/node_modules/
+website/build/
+website/.docusaurus/
+website/.cache-loader/
+website/node_modules/.cache/

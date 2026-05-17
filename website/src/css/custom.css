@@ -1,0 +1,106 @@
+/* ── Brand colours ──────────────────────────────────────────────────── */
+:root {
+  --ifm-color-primary:         #6c47ff;
+  --ifm-color-primary-dark:    #5a33ff;
+  --ifm-color-primary-darker:  #4e25ff;
+  --ifm-color-primary-darkest: #3300f5;
+  --ifm-color-primary-light:   #7e5bff;
+  --ifm-color-primary-lighter: #8a69ff;
+  --ifm-color-primary-lightest:#ad96ff;
+  --ifm-code-font-size:        95%;
+  --docusaurus-highlighted-code-line-bg: rgba(108, 71, 255, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary:         #a78bfa;
+  --ifm-color-primary-dark:    #8b66f8;
+  --ifm-color-primary-darker:  #7d57f7;
+  --ifm-color-primary-darkest: #5a2ef4;
+  --ifm-color-primary-light:   #c3b0fc;
+  --ifm-color-primary-lighter: #d1c3fd;
+  --ifm-color-primary-lightest:#e9e3fe;
+  --docusaurus-highlighted-code-line-bg: rgba(167, 139, 250, 0.15);
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.hero--primary {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+.hero__title { font-size: 3rem; font-weight: 800; }
+.hero__subtitle { font-size: 1.3rem; opacity: 0.85; }
+
+/* ── Feature cards ──────────────────────────────────────────────────── */
+.feature-card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(108,71,255,0.15);
+  transform: translateY(-2px);
+}
+.feature-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+/* ── Module grid ────────────────────────────────────────────────────── */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+.module-card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.module-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 16px rgba(108,71,255,0.12);
+  text-decoration: none;
+  color: inherit;
+}
+.module-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.25rem;
+}
+.module-title { font-size: 1rem; font-weight: 600; margin: 0; }
+.module-meta  { font-size: 0.8rem; color: var(--ifm-color-emphasis-600); margin-top: 0.4rem; }
+
+/* ── Quick-start code block ────────────────────────────────────────── */
+.quickstart {
+  background: #1e1e2e;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  color: #cdd6f4;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.quickstart .comment { color: #6c7086; }
+.quickstart .cmd     { color: #89b4fa; }
+.quickstart .str     { color: #a6e3a1; }
+
+/* ── Section headings ───────────────────────────────────────────────── */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Navbar tweak ───────────────────────────────────────────────────── */
+.navbar { box-shadow: 0 1px 0 var(--ifm-color-emphasis-200); }
