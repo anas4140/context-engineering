@@ -20,7 +20,7 @@ jobs:
       - name: Install test dependencies
         run: |
           pip install anthropic python-dotenv rich tenacity rank-bm25 mcp \
-                      pytest pytest-asyncio
+                      tiktoken pytest pytest-asyncio
 
       - name: Run unit tests (no API key needed)
         env:
