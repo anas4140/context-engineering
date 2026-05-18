@@ -1,0 +1,28 @@
+name: Run test suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: |
+          pip install anthropic python-dotenv rich tenacity rank-bm25 mcp \
+                      pytest pytest-asyncio
+
+      - name: Run unit tests (no API key needed)
+        env:
+          ANTHROPIC_API_KEY: test-key-sk-ant-ci-only
+        run: python -m pytest tests/ -v --tb=short -m "not integration"

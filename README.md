@@ -66,6 +66,8 @@ python code/module1/lesson1_context_demo.py
 | [Module 8](Lessons/Module8/) | Extended Thinking | 2 | [code/module8/](code/module8/) |
 | [Module 9](Lessons/Module9/) | Production at Scale (Batch API, Streaming, Rate Limits) | 3 | [code/module9/](code/module9/) |
 | [Module 10](Lessons/Module10/) | Model Context Protocol (MCP) | 2 | [code/module10/](code/module10/) |
+| [Module 11](Lessons/Module11/) | Async & Concurrent Patterns | 2 | [code/module11/](code/module11/) |
+| [Module 12](Lessons/Module12/) | Prompt Versioning & A/B Testing | 2 | [code/module12/](code/module12/) |
 
 **Final Project:** [FINAL_PROJECT.md](FINAL_PROJECT.md) — Build a complete AI Research Assistant  
 **Glossary:** [GLOSSARY.md](GLOSSARY.md)  
@@ -77,9 +79,9 @@ python code/module1/lesson1_context_demo.py
 
 | Level | Time |
 |---|---|
-| Skim (read lessons only) | ~6 hours |
-| Standard (lessons + run code) | ~18 hours |
-| Deep (lessons + code + tasks) | ~35 hours |
+| Skim (read lessons only) | ~8 hours |
+| Standard (lessons + run code) | ~24 hours |
+| Deep (lessons + code + tasks) | ~45 hours |
 
 ---
 

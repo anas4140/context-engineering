@@ -34,6 +34,8 @@ const MODULES = [
   { num: 8,  title: 'Extended Thinking',                  lessons: 2,  badge: 'New',         path: '/docs/Module8/Lesson1_Extended_Thinking' },
   { num: 9,  title: 'Production at Scale',                lessons: 3,  badge: 'Batch API',   path: '/docs/Module9/Lesson1_Batch_API' },
   { num: 10, title: 'Model Context Protocol (MCP)',       lessons: 2,  badge: 'New',         path: '/docs/Module10/Lesson1_MCP_Introduction' },
+  { num: 11, title: 'Async & Concurrent Patterns',       lessons: 2,  badge: 'New',         path: '/docs/Module11/Lesson1_Async_Basics' },
+  { num: 12, title: 'Prompt Versioning & A/B Testing',   lessons: 2,  badge: 'New',         path: '/docs/Module12/Lesson1_Prompt_Versioning' },
 ];
 
 function Hero() {
@@ -44,7 +46,7 @@ function Hero() {
         <h1 className="hero__title">Context Engineering<br />for AI</h1>
         <p className="hero__subtitle">
           The complete, hands-on course for building robust, reliable, and<br />
-          cost-efficient AI applications with Claude.
+          cost-efficient AI applications with Claude — 12 modules, fully tested.
         </p>
         <div className={styles.heroButtons}>
           <Link className="button button--lg button--secondary" to="/docs/Module1/Lesson1_What_is_Context">
@@ -55,9 +57,9 @@ function Hero() {
           </Link>
         </div>
         <div className={styles.heroBadges}>
-          <span>10 modules</span>
-          <span>33 lessons</span>
-          <span>244 tests</span>
+          <span>12 modules</span>
+          <span>37 lessons</span>
+          <span>268 tests</span>
           <span>Python + Anthropic SDK</span>
         </div>
       </div>

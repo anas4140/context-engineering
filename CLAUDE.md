@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-A ten-module course on context engineering for large language models, using the Anthropic Python SDK (`anthropic` package). Each module has lesson code under `code/`, a solution under `solutions/`, and markdown notes under `Lessons/`.
+A twelve-module course on context engineering for large language models, using the Anthropic Python SDK (`anthropic` package). Each module has lesson code under `code/`, a solution under `solutions/`, and markdown notes under `Lessons/`.
 
 ## Running code
 
@@ -28,6 +28,8 @@ python final_project/research_assistant.py
 | 8 | **Extended Thinking** | `code/module8/lesson1_extended_thinking.py` | `solutions/module8/solution_extended_thinking.py` |
 | 9 | **Production at Scale** (Batch API, Streaming, Rate Limits) | `code/module9/lesson1_batch_api.py` | `solutions/module9/solution_batch_eval.py` |
 | 10 | **Model Context Protocol (MCP)** | `code/module10/lesson1_mcp_client.py` | `solutions/module10/solution_mcp_agent.py` |
+| 11 | **Async & Concurrent Patterns** | `code/module11/lesson1_async_basics.py` | `solutions/module11/solution_async_agent.py` |
+| 12 | **Prompt Versioning & A/B Testing** | `code/module12/lesson1_prompt_versioning.py` | `solutions/module12/solution_ab_testing.py` |
 | — | Final project (all 11 CWA layers) | `final_project/research_assistant.py` | — |
 
 ## Shared config
@@ -61,6 +63,18 @@ MODEL_THINKING  = "claude-opus-4-7"              # Module 8 extended thinking
 **Files API** — `code/module7/lesson5_files_api.py` uploads text/PDFs once and references them by `file_id` in `client.beta.messages.create()` with `betas=["files-api-2025-04-14"]`.
 
 **Rolling summarization** — Conversation history in `final_project/research_assistant.py` is compressed with Haiku every `SUMMARIZE_AFTER_TURNS` turns.
+
+**Async concurrency** — `code/module11/` uses `anthropic.AsyncAnthropic` with `asyncio.gather` for concurrent agent calls and `asyncio.Semaphore` for rate-limit-safe batching.
+
+**Prompt versioning** — `code/module12/lesson1_prompt_versioning.py` implements a `PromptRegistry` with version tagging, production promotion gating, and quality-delta checks.
+
+**A/B testing** — `code/module12/lesson2_ab_testing.py` runs controlled prompt comparisons using LLM-as-judge, reporting win/loss/tie breakdown and a promotion recommendation.
+
+## CI / Tests
+
+- `python3 -m pytest tests/` — 268 unit tests, all pure (no API key needed), under 2s
+- `.github/workflows/run-tests.yml` — runs on every push to `main`
+- `.github/workflows/deploy-docs.yml` — builds Docusaurus site and deploys to GitHub Pages
 
 ## Dependencies note
 
