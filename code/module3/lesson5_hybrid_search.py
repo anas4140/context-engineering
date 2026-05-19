@@ -5,7 +5,7 @@ Demonstrates combining dense vector search (ChromaDB) with sparse BM25
 retrieval, fused via Reciprocal Rank Fusion (RRF) for higher recall.
 
 Run:
-    python code/module3/lesson3_hybrid_search.py
+    python code/module3/lesson5_hybrid_search.py
 """
 
 import os

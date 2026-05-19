@@ -145,3 +145,19 @@ Log these in production to alert before you hit limits rather than after.
 ---
 
 *Up next: Module 10 — Model Context Protocol*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module9/lesson3_rate_limits.py
+```
+
+1. **Read quota headers**: After `create_with_retry()` succeeds, print `show_quota_headers(response)`. How many requests remain? Reset happens at what time?
+2. **Trigger the retry**: Set `stop_after_attempt(2)` in the tenacity decorator and intentionally send a request with an invalid model name. Does it retry? What's the final exception?
+3. **TPM pacing**: Set `TokenPacer(tpm_limit=100)` — a very tight limit. Send a 200-token prompt. Does the pacer wait before sending? Add a print statement to confirm it's pacing correctly.
+
+---
+
+*Next: [Module 10 — Model Context Protocol](../Module10/Lesson1_MCP_Introduction.md)*

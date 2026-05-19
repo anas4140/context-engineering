@@ -30,9 +30,12 @@ No prior AI or ML experience required. Code examples are heavily commented for b
 
 ## Quick Start
 
+> **First time?** Follow the detailed [SETUP.md](SETUP.md) guide — it covers Python version, virtual environments, and getting your API key step by step.  
+> **Hitting errors?** See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for the 10 most common problems and fixes.
+
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/context-engineering.git
+git clone https://github.com/anas4140/context-engineering.git
 cd context-engineering
 
 # 2. Create a virtual environment

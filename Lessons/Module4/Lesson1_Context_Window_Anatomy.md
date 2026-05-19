@@ -60,3 +60,19 @@ LLMs pay the most attention to content at the **beginning** (primacy) and **end*
 ---
 
 *Next: [Lesson 2 — Compression Techniques](Lesson2_Compression.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module4/lesson1_anatomy.py
+```
+
+1. Add a 500-token "retrieved knowledge" block to the context window and observe how it shifts the percentages. What proportion of the window is now available for conversation history?
+2. The demo shows "lost-in-the-middle" degradation. Move the key fact to the very end of the context. Does recall improve?
+3. Write a function `token_budget(system_tokens, history_tokens, rag_tokens)` that returns how many tokens remain for the model's output given a 200K window.
+
+---
+
+*Next: [Lesson 2 — Compression Techniques](Lesson2_Compression.md)*

@@ -139,3 +139,17 @@ Use ChromaDB when you have many large documents and need selective retrieval. Us
 ---
 
 *Up next: Module 8 — Extended Thinking*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module7/lesson5_files_api.py
+```
+
+1. **Multi-query same file**: Upload the employee handbook once, then ask 5 different questions using the same `file_id`. Confirm the document bytes are only sent once (check request size).\n2. **File lifecycle**: After uploading, list all files with `client.beta.files.list()`. Delete the file. Try to query it again — what error do you get?\n3. **Text vs PDF**: Upload a `.txt` file and a short PDF (one you have locally). Ask the same question to both. Do the answers differ?
+
+---
+
+*Next: [Module 8 — Extended Thinking](../Module8ExtendedThinking)*

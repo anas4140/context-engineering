@@ -5,7 +5,7 @@ Shows how to use tool_choice to force Claude to return validated JSON
 that conforms to a schema — no string parsing, no format instructions needed.
 
 Run:
-    python code/module5/lesson3_structured_outputs.py
+    python code/module5/lesson4_structured_outputs.py
 """
 
 import os

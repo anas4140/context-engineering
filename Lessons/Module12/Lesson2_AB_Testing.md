@@ -116,3 +116,19 @@ Test **one variable at a time**. Changing both tone and format makes it impossib
 ---
 
 *Up next: Final Project — pull everything together*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module12/lesson2_ab_testing.py
+```
+
+1. **Run a fair test**: Change one variable only — replace Prompt B's tone instruction with "Be extremely concise — max 2 sentences." Keep everything else the same. Does brevity win or lose?
+2. **Extend the test set**: Add 4 more test cases on topics you care about. Does the winner change with more data? This demonstrates why small test sets are unreliable.
+3. **Build a full pipeline**: Connect the A/B test to the `PromptRegistry` from Lesson 1. If Prompt B wins with win_rate > 0.6, automatically call `registry.promote("my_prompt", "v2.0")`. You've just built a continuous improvement loop.
+
+---
+
+*Next: [Final Project — Build a complete AI Research Assistant](../../FINAL_PROJECT.md)*

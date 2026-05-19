@@ -136,19 +136,19 @@ class TestToolSchemaValidation:
             self._check_tool(tool)
 
     def test_structured_output_tools(self):
-        so = load_module("code/module5/lesson3_structured_outputs.py")
+        so = load_module("code/module5/lesson4_structured_outputs.py")
         for tool in [so.PERSON_TOOL, so.SENTIMENT_TOOL, so.MEETING_TOOL]:
             self._check_tool(tool)
 
     def test_person_tool_required_fields(self):
-        so = load_module("code/module5/lesson3_structured_outputs.py")
+        so = load_module("code/module5/lesson4_structured_outputs.py")
         required = so.PERSON_TOOL["input_schema"].get("required", [])
         assert "name" in required
         assert "age" in required
         assert "city" in required
 
     def test_sentiment_tool_has_enum(self):
-        so = load_module("code/module5/lesson3_structured_outputs.py")
+        so = load_module("code/module5/lesson4_structured_outputs.py")
         props = so.SENTIMENT_TOOL["input_schema"]["properties"]
         assert "enum" in props["sentiment"]
         assert "positive" in props["sentiment"]["enum"]

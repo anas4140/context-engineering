@@ -71,3 +71,23 @@ meta_prompt = (
 ---
 
 *You've completed Module 2! Next: [Module 3 — Retrieval-Augmented Generation](../Module3/Lesson1_Introduction_to_RAG.md)*
+
+---
+
+## Hands-On Task
+
+Run the advanced strategies demo:
+
+```bash
+python code/module2/lesson3_advanced_strategies.py
+```
+
+Then try:
+
+1. **Chain prompting**: Take a topic of your choice and write a 3-step chain: (1) generate 5 ideas, (2) pick the best one, (3) expand it into a paragraph. Can one big prompt do what three chained prompts do?
+2. **Self-consistency**: Run the same open-ended question 3 times with `temperature=1`. Do the answers agree? What does this tell you about model uncertainty?
+3. **Meta-improvement**: Write a deliberately bad system prompt for a customer support bot. Feed it to the `meta_improve_prompt()` function and compare the before/after. What specific changes did the model make?
+
+---
+
+*Next: [Module 3 — Retrieval-Augmented Generation](../Module3/Lesson1_Introduction_to_RAG.md)*

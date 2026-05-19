@@ -5,7 +5,7 @@ rank_bm25 = pytest.importorskip("rank_bm25", reason="rank-bm25 not installed")
 
 from tests.conftest import load_module
 
-_mod = load_module("code/module3/lesson3_hybrid_search.py")
+_mod = load_module("code/module3/lesson5_hybrid_search.py")
 rrf            = _mod.rrf
 build_sparse   = _mod.build_sparse
 sparse_retrieve = _mod.sparse_retrieve

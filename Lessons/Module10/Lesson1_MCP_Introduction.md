@@ -101,3 +101,25 @@ response = client.messages.create(model=..., tools=claude_tools, messages=...)
 ---
 
 *Next: [Lesson 2 — Building an MCP Server](Lesson2_MCP_Server.md)*
+
+---
+
+## Hands-On Task
+
+Read the code before running:
+
+```bash
+# Start the MCP server in one terminal
+python code/module10/mcp_server.py
+
+# In another terminal, run the client
+python code/module10/lesson1_mcp_client.py
+```
+
+1. **Add a 4th tool**: Add a `word_reverse(text)` tool to `mcp_server.py` that reverses all words in a sentence. Restart the server and run the client — does it automatically discover the new tool without any client code changes?
+2. **Trace the flow**: Add a `print("MCP call received:", name, arguments)` line inside `call_tool()` in the server. Run the client and verify you can see each tool call arrive at the server.
+3. **Compare to inline tools**: The same calculator exists in `code/module5/lesson_agent_loop.py` as a plain Python function. What are the 3 key differences between using it inline vs through MCP?
+
+---
+
+*Next: [Lesson 2 — Building an MCP Server](Lesson2_MCP_Server.md)*

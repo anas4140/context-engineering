@@ -55,3 +55,19 @@ Rather than asking Claude to format its response in JSON and parsing the result 
 ---
 
 *Next: [Lesson 2 — Multimodal Context](Lesson2_Multimodal.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module7/lesson1_patterns.py
+```
+
+1. **Measure cache savings**: Run the same system prompt twice (with and without `cache_control`). Compare the `cache_read_input_tokens` in the usage stats. How many tokens were saved?
+2. **Structured output**: Take any free-text response from Module 2 or 3 and re-implement it using a tool schema with `tool_choice`. How does the output structure compare?
+3. **Thinking tokens**: Add `thinking={"type": "enabled", "budget_tokens": 2000}` to a complex reasoning call. Read the `thinking` block — does it help on a maths problem vs a simple factual question?
+
+---
+
+*Next: [Lesson 2 — Multimodal Context](Lesson2_Multimodal.md)*

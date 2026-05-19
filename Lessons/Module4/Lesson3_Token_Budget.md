@@ -51,3 +51,19 @@ Act at 80% capacity, not 100%. At 100% the API will either error or silently tru
 ---
 
 *You've completed Module 4! Next: [Module 5 — From RAG to Agents](../Module5/Lesson1_ReAct_Pattern.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module4/lesson3_token_budget.py
+```
+
+1. Set `MAX_TOKENS = 500` in the demo. At what turn does the budget-aware conversation start compressing history?
+2. The `compress_history()` function keeps the most recent 4 turns. Change it to keep the most recent 2 turns. How does answer quality change on turn 10?
+3. Implement a `token_warning()` function that prints a warning when the context window is over 80% full.
+
+---
+
+*Next: [Module 5 — From RAG to Agents](../Module5/Lesson1_ReAct_Pattern.md)*

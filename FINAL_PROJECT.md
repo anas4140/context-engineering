@@ -1,6 +1,6 @@
 # Final Project: AI Research Assistant
 
-> Apply every skill from the course to build a production-grade, context-aware AI research assistant.
+> Apply every skill from all 12 modules to build a production-grade, context-aware AI research assistant.
 
 ---
 
@@ -113,9 +113,30 @@ python final_project/research_assistant.py
 
 ---
 
+## Optional Extension Deliverables (Modules 8–12)
+
+These are not required but demonstrate mastery of the advanced modules:
+
+### Extension A — Extended Thinking (Module 8)
+For complex multi-step research queries, enable extended thinking on the final answer generation. Measure whether it improves faithfulness scores. Set `budget_tokens=4000` and compare outputs.
+
+### Extension B — Batch Evaluation (Module 9)
+Replace the sequential evaluation in `evaluate.py` with a Batch API call. Submit all test cases at once at 50% cost and poll for results. See `solutions/module9/solution_batch_eval.py`.
+
+### Extension C — Async Concurrency (Module 11)
+Convert the RAG retrieval + generation pipeline to use `AsyncAnthropic`. Run multiple queries concurrently with `asyncio.gather`. Measure the wall-clock speedup vs the synchronous version.
+
+### Extension D — Prompt A/B Test (Module 12)
+Use the A/B testing framework from Module 12 to compare your custom system prompt against the reference implementation's system prompt. Run 5 test cases through both and report which wins on faithfulness.
+
+---
+
 ## Tips
 
 - **Start with Deliverable 1** — good documents make everything else easier.
 - **Test your tool definition** using `solutions/module5/solution_tool_definition.py` as a template.
 - **The evaluation suite is your quality gate** — if faithfulness scores are low, improve your RAG prompt.
+- Use **prompt caching** (Module 7) on your stable system prompt layers to cut API costs during iteration.
+- For debugging RAG: run `solutions/module3/solution_hybrid_search.py` on your documents first.
 - Refer to [`GLOSSARY.md`](GLOSSARY.md) for any unfamiliar terms.
+- Refer to [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md) if you hit errors.

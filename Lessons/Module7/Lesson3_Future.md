@@ -57,3 +57,17 @@ The skills you've learned in this course — context design, RAG, agents, evalua
 ---
 
 *Next: [Lesson 4 — A Unifying Theory: The Context Window Architecture](Lesson4_CWA.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module7/lesson3_future.py
+```
+
+1. **Compare reflection vs no-reflection**: Run the same task with and without self-reflection. Count the number of specific facts in each answer — does reflection produce more substantive responses?\n2. **Constitutional compliance**: Add a 4th principle to the CONSTITUTION: 'Never use passive voice.' Run a question through and check if the revised answer avoids passive constructions.\n3. **Meta-prompt your own tool**: Write a simple weather-bot system prompt. Feed it to `meta_prompt()`. What did the model add that you didn't think of?
+
+---
+
+*Next: [Lesson 4 — CWA](../Lesson4CWA)*

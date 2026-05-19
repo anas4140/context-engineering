@@ -107,3 +107,19 @@ results = await asyncio.gather(*[ask_safe(p) for p in 100_prompts])
 ---
 
 *Next: [Lesson 2 — Concurrent Multi-Agent Systems](Lesson2_Concurrent_Agents.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module11/lesson1_async_basics.py
+```
+
+1. **Measure the speedup**: Change `QUERIES` to contain 8 items. Run both sequential and concurrent versions. Calculate the speedup ratio. Does it scale linearly with the number of queries?
+2. **Semaphore effect**: Change `max_concurrency=3` to `max_concurrency=1`. Does it behave like the sequential version? Change it to `max_concurrency=10`. What happens if you exceed your rate limit?
+3. **Async streaming**: Modify `stream_response()` to also record and print the time-to-first-token. Does async streaming have lower TTFT than a regular `await async_client.messages.create()`?
+
+---
+
+*Next: [Lesson 2 — Concurrent Multi-Agent Systems](Lesson2_Concurrent_Agents.md)*

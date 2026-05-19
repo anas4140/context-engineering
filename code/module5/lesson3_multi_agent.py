@@ -130,4 +130,4 @@ if __name__ == "__main__":
         console.print("\n" + "─" * 60 + "\n")
 
     console.print("[bold green]✓ Lesson 3 complete![/bold green]")
-    console.print("Next: [italic]python code/module5/lesson3_structured_outputs.py[/italic]\n")
+    console.print("Next: [italic]python code/module5/lesson4_structured_outputs.py[/italic]\n")

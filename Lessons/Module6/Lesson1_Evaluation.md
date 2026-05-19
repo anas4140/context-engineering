@@ -20,7 +20,7 @@ The three most important RAG dimensions:
 
 | Metric | What fails when it's low |
 |---|---|
-| **Faithfulness** | Model is hallucinating beyond the retrieved context |
+| **[Faithfulness](../../GLOSSARY.md)** | Model is hallucinating beyond the retrieved context |
 | **Answer Relevance** | Model is answering a different question than was asked |
 | **Context Precision** | Retriever is fetching irrelevant chunks |
 

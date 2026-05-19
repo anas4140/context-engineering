@@ -18,7 +18,7 @@ The async version of the Anthropic Python client. Methods return coroutines (`aw
 An Anthropic API feature that processes requests asynchronously at 50% lower cost than synchronous calls. Submit a list of requests, poll for completion, then stream results. Ideal for eval runs and dataset annotation. See: [Module 9](code/module9/lesson1_batch_api.py).
 
 **BM25**
-A sparse retrieval algorithm that scores documents by term frequency and inverse document frequency. Excels at exact keyword matches that dense embeddings miss. Combined with vector search in hybrid retrieval. See: [Module 3](code/module3/lesson3_hybrid_search.py).
+A sparse retrieval algorithm that scores documents by term frequency and inverse document frequency. Excels at exact keyword matches that dense embeddings miss. Combined with vector search in hybrid retrieval. See: [Module 3](code/module3/lesson5_hybrid_search.py).
 
 ## C
 
@@ -73,7 +73,7 @@ The practice of providing an LLM with factual source documents to base its answe
 ## H
 
 **Hybrid Search**
-A retrieval strategy that combines dense vector search (semantic similarity) with sparse BM25 keyword search, fusing their ranked lists using Reciprocal Rank Fusion (RRF). Outperforms either method alone on mixed query types. See: [Module 3](code/module3/lesson3_hybrid_search.py).
+A retrieval strategy that combines dense vector search (semantic similarity) with sparse BM25 keyword search, fusing their ranked lists using Reciprocal Rank Fusion (RRF). Outperforms either method alone on mixed query types. See: [Module 3](code/module3/lesson5_hybrid_search.py).
 
 **Hallucination**
 When an LLM generates plausible-sounding but factually incorrect information. The primary motivation for RAG — grounding responses in retrieved facts reduces hallucination.
@@ -157,7 +157,7 @@ A versioned store of system prompts with metadata (version tag, notes, productio
 ## R
 
 **RRF (Reciprocal Rank Fusion)**
-A score-fusion algorithm for hybrid search. Combines ranked lists from multiple retrievers without normalising their scores: `score = Σ 1/(k + rank)`. Simple, parameter-free, and consistently effective. See: [Module 3](code/module3/lesson3_hybrid_search.py).
+A score-fusion algorithm for hybrid search. Combines ranked lists from multiple retrievers without normalising their scores: `score = Σ 1/(k + rank)`. Simple, parameter-free, and consistently effective. See: [Module 3](code/module3/lesson5_hybrid_search.py).
 
 ## S
 
@@ -165,7 +165,7 @@ A score-fusion algorithm for hybrid search. Combines ranked lists from multiple 
 Receiving LLM output token-by-token as it is generated, instead of waiting for the full response. Improves perceived latency. Use `client.messages.stream()` in Python. See: [Module 9](code/module9/lesson2_streaming.py).
 
 **Structured Outputs**
-Using `tool_choice: {type: tool, name: "..."}` to force Claude to return a specific JSON schema — always as a `tool_use` block, never raw text. Eliminates fragile string parsing. See: [Module 5](code/module5/lesson3_structured_outputs.py).
+Using `tool_choice: {type: tool, name: "..."}` to force Claude to return a specific JSON schema — always as a `tool_use` block, never raw text. Eliminates fragile string parsing. See: [Module 5](code/module5/lesson4_structured_outputs.py).
 
 ## T
 

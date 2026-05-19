@@ -111,3 +111,19 @@ At scale (1M tokens/day for eval), batch pricing saves ~$45/day.
 ---
 
 *Next: [Lesson 2 — Streaming Patterns](Lesson2_Streaming_Patterns.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module9/lesson1_batch_api.py
+```
+
+1. **Scale it up**: Add 10 more test cases to `TEST_CASES`. Submit all 20 as a single batch. Does the wall-clock time stay roughly constant (proving async processing)?
+2. **Cost calculation**: After the batch completes, calculate the total input + output tokens from the results. What would this have cost at standard pricing? What did it cost at batch pricing (50% off)?
+3. **Handle errors gracefully**: Deliberately add a malformed request to the batch (e.g., `"max_tokens": -1`). Check what `result.result.type` is for that item and print the error message.
+
+---
+
+*Next: [Lesson 2 — Streaming Patterns](Lesson2_Streaming_Patterns.md)*

@@ -124,3 +124,19 @@ print(f"\nTTFT: {first_token_time:.2f}s | Total: {total_time:.2f}s")
 ---
 
 *Next: [Lesson 3 — Rate Limits & Retry Logic](Lesson3_Rate_Limits.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module9/lesson2_streaming.py
+```
+
+1. **Measure TTFT**: Run the text streaming demo 3 times and record the time-to-first-token each time. Is it consistent? What does high variance suggest?
+2. **Stream a tool call**: Write a query that definitely needs the calculator tool (e.g., "What is the compound interest on $5000 at 4% for 7 years?"). Watch the partial JSON accumulate in the event stream before it's parseable.
+3. **When NOT to stream**: Wrap the streaming call in a `try/except` that catches any streaming error and falls back to a regular `client.messages.create()`. This is the production pattern for streaming with graceful fallback.
+
+---
+
+*Next: [Lesson 3 — Rate Limits](Lesson3_Rate_Limits.md)*

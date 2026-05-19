@@ -123,3 +123,19 @@ messages.append({"role": "user", "content": "Now extend that analysis..."})
 ---
 
 *Up next: Module 9 — Production at Scale*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module8/lesson2_thinking_budgets.py
+```
+
+1. **Find the minimum budget**: Run the scheduling optimisation problem at budgets 1024, 2000, 4000. At which budget does the answer first become correct and stable? That's your minimum viable budget.
+2. **Utilisation sweet spot**: Add a new hard problem of your own (a logic puzzle or multi-constraint optimisation). Run it at budget=3000 and measure utilisation. Is it above 40%? If not, halve the budget.
+3. **Streaming thinking**: Modify `stream_with_thinking()` to count how many thinking tokens arrived vs answer tokens. What's the ratio for a hard problem vs a simple one?
+
+---
+
+*Next: [Module 9 — Production at Scale](../Module9/Lesson1_Batch_API.md)*

@@ -56,3 +56,19 @@ Claude can receive PDFs directly as document blocks. This is more efficient than
 ---
 
 *Next: [Lesson 3 — The Future of Context Engineering](Lesson3_Future.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module7/lesson2_multimodal.py
+```
+
+1. **Token cost comparison**: Use `estimate_image_tokens()` to compare the cost of a 256×256 image vs a 1920×1080 image. How many times more expensive is the larger one?
+2. **Describe + extract**: Send the same image with two different questions: (a) "Describe this image" and (b) "List any text visible in this image." Compare the responses — does Claude behave differently?
+3. **Context window impact**: If you have a 200K token window and you want to include 10 images of 512×512 each, how much of the window do they consume? How many tokens are left for text?
+
+---
+
+*Next: [Lesson 3 — Future Patterns](Lesson3_Future.md)*

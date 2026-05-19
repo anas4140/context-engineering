@@ -111,3 +111,19 @@ for version in registry.history("summariser"):
 ---
 
 *Next: [Lesson 2 — A/B Testing Prompts](Lesson2_AB_Testing.md)*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module12/lesson1_prompt_versioning.py
+```
+
+1. **Add v1.3**: Write a `v1.3` system prompt that adds "Always respond in bullet points." Register it in the registry. Run `eval_prompt()` on all 3 versions and see if the new constraint helps or hurts faithfulness.
+2. **Strict promotion gate**: Modify `promote_if_better()` so the threshold is `0.10` instead of `0.02`. Does any version qualify? What does this tell you about the value of requiring a meaningful improvement delta?
+3. **Version rollback**: Promote `v1.2` to production. Then simulate a quality regression by adding bad text to `v1.2`'s system prompt. Re-evaluate and roll back by calling `registry.promote("hr_answerer", "v1.1")`.
+
+---
+
+*Next: [Lesson 2 — A/B Testing Prompts](Lesson2_AB_Testing.md)*

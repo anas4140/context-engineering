@@ -1,5 +1,7 @@
 # **Module 1, Lesson 1: What is Context and Why is it Critical?**
 
+> **New here?** Follow [SETUP.md](../../SETUP.md) first to install dependencies and add your API key. If you hit any errors, see [TROUBLESHOOTING.md](../../TROUBLESHOOTING.md).
+
 Welcome to Context Engineering for AI. This lesson establishes the single most important concept in the entire course: **context is everything**.
 
 ---
@@ -15,7 +17,7 @@ Welcome to Context Engineering for AI. This lesson establishes the single most i
 
 ## 1. What is Context?
 
-When you send a message to an LLM, the model has no memory, no ability to look things up, and no awareness of who you are or what you need. All it has is the text you send it in that single request — that text is the **context window**.
+When you send a message to an LLM, the model has no memory, no ability to look things up, and no awareness of who you are or what you need. All it has is the text you send it in that single request — that text is the **[context window](../../GLOSSARY.md)**.
 
 Context engineering is the discipline of deciding **what to put in that window**.
 

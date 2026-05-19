@@ -15,7 +15,7 @@ Every character you send to an LLM costs money and consumes a finite resource: t
 
 ## 1. What is a Token?
 
-LLMs don't process text character by character — they process **tokens**, which are chunks of text that a tokeniser has split the input into.
+LLMs don't process text character by character — they process **[tokens](../../GLOSSARY.md)**, which are chunks of text that a tokeniser has split the input into.
 
 Rule of thumb:
 - **1 token ≈ 4 characters** in English

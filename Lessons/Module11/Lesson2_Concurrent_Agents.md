@@ -115,3 +115,19 @@ This replaces 3 sequential API calls (~4.5s) with 1 concurrent batch (~1.5s).
 ---
 
 *Up next: Module 12 — Prompt Versioning & A/B Testing*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module11/lesson2_concurrent_agents.py
+```
+
+1. **Time the parallel vs sequential**: Copy the `parallel_research()` function and create a `sequential_research()` version that uses `await` on each subagent one at a time. Measure the wall-clock time difference on the same topic.
+2. **Partial failure recovery**: Change one of the subagent calls to use `timeout=0.001` (guaranteed timeout). Use `gather_with_fallbacks()` to collect results. Does the synthesiser still produce a useful answer with one missing input?
+3. **Parallel evaluation**: Use `asyncio.gather` to run `evaluate_parallel()` on 3 different answers simultaneously. How long does scoring 3 answers take vs scoring them one at a time?
+
+---
+
+*Next: [Module 12 — Prompt Versioning & A/B Testing](../Module12/Lesson1_Prompt_Versioning.md)*

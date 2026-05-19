@@ -46,9 +46,9 @@ MODEL_THINKING  = "claude-opus-4-7"              # Module 8 extended thinking
 
 **Prompt caching** — Stable system-prompt layers use `cache_control: {type: ephemeral}`. See `final_project/research_assistant.py → build_system_prompt()` and `solutions/module7/solution_cwa_design.py`.
 
-**Hybrid RAG** — `code/module3/lesson3_hybrid_search.py` combines ChromaDB dense search with BM25 sparse retrieval, fused via Reciprocal Rank Fusion. RAG chunks are also filtered by `RAG_DISTANCE_THRESHOLD`.
+**Hybrid RAG** — `code/module3/lesson5_hybrid_search.py` combines ChromaDB dense search with BM25 sparse retrieval, fused via Reciprocal Rank Fusion. RAG chunks are also filtered by `RAG_DISTANCE_THRESHOLD`.
 
-**Structured outputs** — `code/module5/lesson3_structured_outputs.py` uses `tool_choice: {type: tool}` to force schema-conforming JSON with no string parsing.
+**Structured outputs** — `code/module5/lesson4_structured_outputs.py` uses `tool_choice: {type: tool}` to force schema-conforming JSON with no string parsing.
 
 **Extended thinking** — `code/module8/` demos the `thinking: {type: enabled, budget_tokens: N}` parameter on `claude-opus-4-7`. Budget utilisation is measured to avoid over-allocation.
 

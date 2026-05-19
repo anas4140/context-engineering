@@ -130,3 +130,23 @@ Hybrid always matches or beats either alone.
 ---
 
 *Up next: Module 4 — Token Budget & Compression*
+
+---
+
+## Hands-On Task
+
+Run the hybrid search demo:
+
+```bash
+python code/module3/lesson5_hybrid_search.py
+```
+
+Then try:
+
+1. **Beat dense-only**: Add a document containing a product code like `SKU-XR7-ALPHA` to the `DOCS` list. Query for `SKU-XR7-ALPHA` and compare dense vs hybrid results. Which finds it?
+2. **Tune the k parameter**: In the `rrf()` function, change `k=60` to `k=5` and then `k=200`. How does it affect the ranking when two retrievers disagree?
+3. **Mixed query**: Write a query that has both a semantic component ("how does it work") and a keyword component (a specific term). Does hybrid search return a better top result than either alone?
+
+---
+
+*Next: [Module 4 — Optimising the Context Window](../Module4/Lesson1_Context_Window_Anatomy.md)*

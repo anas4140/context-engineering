@@ -156,3 +156,19 @@ batch = client.messages.batches.create(requests=requests)
 ---
 
 *Up next: Module 6 — Evaluation*
+
+---
+
+## Hands-On Task
+
+```bash
+python code/module5/lesson4_structured_outputs.py
+```
+
+1. **Add an enum field**: Add a `language` field to `PERSON_TOOL` with enum values `["English", "Spanish", "French", "Other"]`. Extract it from: *"Bonjour, je m'appelle Marie, 28 ans, Paris."*
+2. **Invoice extractor**: Design a tool schema to extract structured data from this text: *"Invoice #2024-001 from CloudHost Ltd — $450 for compute + $50 for storage. Due 2024-08-01."* Use `tool_choice` to force the extraction.
+3. **What happens without `tool_choice`?** Remove `tool_choice` from one call. Does Claude still always return a tool_use block, or does it sometimes respond with text instead?
+
+---
+
+*Next: [Module 6 — Evaluation, Testing & Security](../Module6/Lesson1_Evaluation.md)*

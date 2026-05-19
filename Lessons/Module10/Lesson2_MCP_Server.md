@@ -171,3 +171,19 @@ async def run_agent_with_mcp(user_query: str, session: ClientSession):
 ---
 
 *Up next: Final Project refinements using all 10 modules*
+
+---
+
+## Hands-On Task
+
+```bash
+python solutions/module10/solution_mcp_agent.py
+```
+
+1. **Add a database tool**: Add a `lookup_price(product_name)` tool to the server that returns a fake price from a dict. Test it by asking the agent "How much does the SmartFridge cost?"
+2. **Error handling**: Deliberately pass the wrong argument type (e.g., send a number where a string is expected). What error does the MCP server return? How does the client handle it?
+3. **Multi-turn memory**: The solution agent maintains `history` across turns. Ask two related questions ("What is 15 × 12?" then "Add 100 to that"). Does the agent remember the previous answer?
+
+---
+
+*Next: [Module 11 — Async & Concurrent Patterns](../Module11/Lesson1_Async_Basics.md)*
