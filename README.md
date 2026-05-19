@@ -3,6 +3,8 @@
 > A free, open-source course on building robust, reliable, and efficient context-aware AI applications.  
 > Every lesson includes **runnable Python code**, solution notebooks, and hands-on tasks with answer keys.
 
+**[🌐 Course Website](https://anas4140.github.io/context-engineering/)** · [Setup Guide](SETUP.md) · [Troubleshooting](TROUBLESHOOTING.md)
+
 ---
 
 ## What You Will Build

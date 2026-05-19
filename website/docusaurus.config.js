@@ -59,6 +59,8 @@ const config = {
             position:  'left',
             label:     'Lessons',
           },
+          { to: '/setup',           label: 'Setup Guide',    position: 'left' },
+          { to: '/troubleshooting', label: 'Troubleshooting', position: 'left' },
           {
             href:     'https://github.com/anas4140/context-engineering',
             label:    'GitHub',
@@ -71,25 +73,27 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Course',
+            title: 'Get Started',
             items: [
-              { label: 'Start Here',       to: '/docs/Module1/Lesson1_What_is_Context' },
+              { label: 'Setup Guide',      to: '/setup' },
+              { label: 'Troubleshooting',  to: '/troubleshooting' },
+              { label: 'Start Lesson 1',   to: '/docs/Module1/Lesson1_What_is_Context' },
               { label: 'Final Project',    to: '/docs/Module7/Lesson4_CWA' },
-              { label: 'GitHub Repo',      href: 'https://github.com/anas4140/context-engineering' },
             ],
           },
           {
             title: 'Modules',
             items: [
-              { label: 'Module 1 — Foundations',     to: '/docs/Module1/Lesson1_What_is_Context' },
-              { label: 'Module 5 — Agents',          to: '/docs/Module5/Lesson1_ReAct_Pattern' },
+              { label: 'Module 1 — Foundations',       to: '/docs/Module1/Lesson1_What_is_Context' },
+              { label: 'Module 5 — Agents',            to: '/docs/Module5/Lesson1_ReAct_Pattern' },
               { label: 'Module 8 — Extended Thinking', to: '/docs/Module8/Lesson1_Extended_Thinking' },
-              { label: 'Module 10 — MCP',            to: '/docs/Module10/Lesson1_MCP_Introduction' },
+              { label: 'Module 12 — A/B Testing',      to: '/docs/Module12/Lesson1_Prompt_Versioning' },
             ],
           },
           {
             title: 'Resources',
             items: [
+              { label: 'GitHub Repo',       href: 'https://github.com/anas4140/context-engineering' },
               { label: 'Anthropic Console', href: 'https://console.anthropic.com' },
               { label: 'Anthropic Docs',    href: 'https://docs.anthropic.com' },
             ],

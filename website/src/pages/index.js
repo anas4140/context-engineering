@@ -8,8 +8,8 @@ import styles from './index.module.css';
 const FEATURES = [
   {
     icon: '📚',
-    title: '10 Modules, 33 Lessons',
-    body: 'From zero-shot prompting to multi-agent systems, extended thinking, and the Model Context Protocol.',
+    title: '12 Modules, 37+ Lessons',
+    body: 'From zero-shot prompting to multi-agent systems, extended thinking, async patterns, and prompt A/B testing.',
   },
   {
     icon: '⚡',
@@ -18,8 +18,8 @@ const FEATURES = [
   },
   {
     icon: '🔑',
-    title: 'Answer Keys Included',
-    body: 'Every hands-on task has a complete solution in the solutions/ directory. Learn by comparing.',
+    title: 'Answer Keys + Hands-on Tasks',
+    body: 'Every lesson has 3 hands-on exercises. Every task has a complete solution to compare against.',
   },
 ];
 
@@ -49,11 +49,11 @@ function Hero() {
           cost-efficient AI applications with Claude — 12 modules, fully tested.
         </p>
         <div className={styles.heroButtons}>
-          <Link className="button button--lg button--secondary" to="/docs/Module1/Lesson1_What_is_Context">
-            Start Learning →
+          <Link className="button button--lg button--secondary" to="/setup">
+            Setup Guide →
           </Link>
-          <Link className="button button--lg button--outline button--secondary" to="https://github.com/anas4140/context-engineering">
-            View on GitHub
+          <Link className="button button--lg button--outline button--secondary" to="/docs/Module1/Lesson1_What_is_Context">
+            Start Lesson 1
           </Link>
         </div>
         <div className={styles.heroBadges}>
@@ -105,8 +105,9 @@ function QuickStart() {
         </div>
         <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-600)' }}>
           Requires Python 3.10+ and an{' '}
-          <a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic API key</a>.
-          No prior AI or ML experience required.
+          <a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic API key</a>{' '}
+          (free tier available). No prior AI or ML experience required.{' '}
+          Need help? See the <Link to="/setup">Setup Guide</Link> or <Link to="/troubleshooting">Troubleshooting</Link>.
         </p>
       </div>
     </section>
@@ -118,7 +119,7 @@ function ModuleGrid() {
     <section className={styles.modulesSection}>
       <div className="container">
         <p className="section-label">Curriculum</p>
-        <h2>10 modules, structured for depth</h2>
+        <h2>12 modules, structured for depth</h2>
         <div className="module-grid">
           {MODULES.map(({ num, title, lessons, badge, path }) => (
             <Link key={num} className="module-card" to={path}>
